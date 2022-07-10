@@ -1,0 +1,6 @@
+<div (click)=onClick()>
+  <div (click)="logUser(user)" (click)="onClickUser(user)">
+    <i *ngIf="selected" class="material-icons">done</i>
+    <span> {{index+1}}. {{ user.name }} </span>
+  </div>
+</div>

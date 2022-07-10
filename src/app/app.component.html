@@ -1,0 +1,23 @@
+<h1> list users </h1>
+
+<div>
+
+  <div *ngFor="let user of users; index as i" (click)="logUser(user)">
+    <span> user {{ i+1 }} </span>
+    <br>
+    <span> {{ user.name }} 
+      - price: {{ user.price | currency:'EUR':'symbol'}} 
+      - ranking: {{user.ranking | number:'1.2-2'}}
+      - ranking (%): {{user.ranking / 100 | percent}}
+    </span>
+    <hr>
+
+  </div>
+
+  <div>
+    <p>test</p>
+    <my-user-display *ngFor="let user of users; index as i" [uuserr]="user" [user]="user" [index]="i">  
+    </my-user-display>
+  </div>
+
+</div>
